@@ -33,7 +33,7 @@ public class MyMultipleStepDef {
 		
 		driver.get("https://www.facebook.com/");
 		
-        System.out.println("This Step open the chrome and launch the facebook page.");
+        //System.out.println("This Step open the chrome and launch the facebook page.");
        
     }
 
