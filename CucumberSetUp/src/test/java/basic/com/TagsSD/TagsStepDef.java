@@ -22,6 +22,7 @@ public class TagsStepDef {
     public void User_need_to_be_on_facebook_login_page()  {
     	System.setProperty("webdriver.chrome.driver", "D://Automation//Softwares//chrome_win32//chromedriver.exe");
 		driver = new ChromeDriver();
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
