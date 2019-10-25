@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.But;
@@ -20,9 +21,16 @@ public class TagsStepDef {
      
     @Given("^User need to be on facebook login page$")
     public void User_need_to_be_on_facebook_login_page()  {
-    	System.setProperty("webdriver.chrome.driver", "D://Automation//Softwares//chrome_win32//chromedriver.exe");
+    	
 		driver = new ChromeDriver();
 		
+		//ChromeOptions chromeOptions= new ChromeOptions();
+		
+		//chromeOptions.setBinary("C://Program Files (x86)//Google//Chrome//Application");
+	
+		System.setProperty("webdriver.chrome.driver", "D://Automation//Softwares//chrome_win32//chromedriver.exe");
+		//driver = new ChromeDriver(chromeOptions);
+		 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
