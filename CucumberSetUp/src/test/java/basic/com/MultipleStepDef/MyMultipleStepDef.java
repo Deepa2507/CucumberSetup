@@ -32,10 +32,7 @@ public class MyMultipleStepDef {
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		
-		driver.get("https://www.facebook.com/");
-		
-        //System.out.println("This Step open the chrome and launch the facebook page.");
-       
+		driver.get("https://www.facebook.com/");       
     }
 
     @When("^User enteres user first name$")

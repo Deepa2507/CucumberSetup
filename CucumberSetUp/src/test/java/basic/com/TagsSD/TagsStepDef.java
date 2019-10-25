@@ -22,13 +22,11 @@ public class TagsStepDef {
     @Given("^User need to be on facebook login page$")
     public void User_need_to_be_on_facebook_login_page()  {
     	
+    	System.setProperty("webdriver.chrome.driver", "D://Automation//Softwares//chrome_win32//chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		//ChromeOptions chromeOptions= new ChromeOptions();
-		
 		//chromeOptions.setBinary("C://Program Files (x86)//Google//Chrome//Application");
-	
-		System.setProperty("webdriver.chrome.driver", "D://Automation//Softwares//chrome_win32//chromedriver.exe");
 		//driver = new ChromeDriver(chromeOptions);
 		 
 		driver.manage().window().maximize();
@@ -40,6 +38,7 @@ public class TagsStepDef {
 
     @When("^User enteres user \"([^\"]*)\" first name$")
     public void User_enteres_user_first_name(String firstname) throws InterruptedException {
+    	Thread.sleep(2000);  
       System.out.println("This step enter the first name on the login page.");
       driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys(firstname);
        Thread.sleep(1000);   
